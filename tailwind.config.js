@@ -4,6 +4,19 @@ export const content = [
 ];
 export const theme = {
   extend: {
+    keyframes: {
+      'animar-cursor': {
+        '0%': {
+          color: 'rgb(30, 64, 175)',
+        },
+        '100%': {
+          color: 'rgb(255, 255, 255)',
+        },
+      },
+    },
+    animation: {
+      'animar-cursor': 'animar-cursor .8s infinite',
+    },
     colors: {
       'light-bg': '#f9fafb',
       'light-text': '#1f2937',
