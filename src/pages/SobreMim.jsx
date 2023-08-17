@@ -4,6 +4,7 @@ import minhafoto from '../assets/minha-foto.png'
 import curriculo from '../assets/Currículo João Pedro.pdf'
 import { useTheme } from '../context/ThemeContext';
 import MinhasInfos from '../components/MinhasInfos';
+import Habilidades from '../components/Habilidades';
 
 function SobreMim() {
     const [showPhoto, setShowPhoto] = useState(false);
@@ -13,7 +14,7 @@ function SobreMim() {
     useEffect(() => {
         setTimeout(() => {
             setShowPhoto(true);
-        }, 2500);
+        }, 100);
     }, []);
 
     useEffect(() => {
@@ -41,11 +42,11 @@ function SobreMim() {
                         Desenvolvedor Frontend
                         <br />
                         <a href={curriculo} download>
-                            <button className={`mt-2 border border-blue-800 rounded-md text-base mr-4 py-2 px-4 bg-blue-800 ${theme === 'light' ? 'text-white hover:bg-white hover:text-blue-800' : 'text-black hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
+                            <button className={`mt-2 border border-blue-800 rounded-md text-base mr-4 py-2 px-4 lg:text-lg bg-blue-800 ${theme === 'light' ? 'text-white hover:bg-white hover:text-blue-800' : 'text-black hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
                                 Baixar CV
                             </button>
                         </a>
-                        <button className={`border border-blue-800 text-base py-2 px-4 rounded-md ${theme === 'light' ? 'hover:bg-white hover:text-blue-800' : 'hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
+                        <button className={`border border-blue-800 text-base py-2 px-4 rounded-md lg:text-lg lg:mt-7 ${theme === 'light' ? 'hover:bg-white hover:text-blue-800' : 'hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
                             Entre em contato
                         </button>
                     </div>
@@ -53,6 +54,9 @@ function SobreMim() {
             </div>
             <div className={`transition-opacity duration-700 lg:duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
                 <MinhasInfos />
+            </div>
+            <div>
+                <Habilidades />
             </div>
         </>
     );
