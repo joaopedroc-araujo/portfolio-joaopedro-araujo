@@ -5,6 +5,7 @@ import curriculo from '../assets/Currículo João Pedro.pdf'
 import { useTheme } from '../context/ThemeContext';
 import MinhasInfos from '../components/MinhasInfos';
 import Habilidades from '../components/Habilidades';
+import Projetos from '../components/Projetos';
 
 function SobreMim() {
     const [showPhoto, setShowPhoto] = useState(false);
@@ -42,7 +43,7 @@ function SobreMim() {
                         Desenvolvedor Frontend
                         <br />
                         <a href={curriculo} download>
-                            <button className={`mt-2 border border-blue-800 rounded-md text-base mr-4 py-2 px-4 lg:text-lg bg-blue-800 ${theme === 'light' ? 'text-white hover:bg-white hover:text-blue-800' : 'text-black hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
+                            <button className={`mt-7 border border-blue-800 rounded-md text-base mr-4 py-2 px-4 lg:text-lg bg-blue-800 ${theme === 'light' ? 'text-white hover:bg-white hover:text-blue-800' : 'text-black hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
                                 Baixar CV
                             </button>
                         </a>
@@ -57,6 +58,9 @@ function SobreMim() {
             </div>
             <div>
                 <Habilidades />
+            </div>
+            <div>
+                <Projetos />
             </div>
         </>
     );
