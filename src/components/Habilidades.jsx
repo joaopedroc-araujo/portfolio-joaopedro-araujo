@@ -10,7 +10,7 @@ function Habilidades() {
             <div className='mt-10 flex justify-center mb-10'>
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:w-full gap-4 w-auto max-w-5xl'>
                     {minhasHabilidades.map((habilidade) => (
-                        <div className='flex flex-col items-center justify-center border-2 shadow border-blue-800 rounded-xl h-36 lg:h-52 lg:w-44 bg-gray-900 grow' key={habilidade.name}>
+                        <div className='flex flex-col items-center justify-center border-2 shadows border-blue-800 rounded-xl h-36 lg:h-52 lg:w-44 bg-gray-900 grow' key={habilidade.name}>
                             <h3 className='text-lg font-bold text-blue-800 lg:text-2xl'>
                                 {habilidade.name}
                             </h3>
