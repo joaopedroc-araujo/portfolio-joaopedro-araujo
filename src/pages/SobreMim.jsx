@@ -26,7 +26,10 @@ function SobreMim() {
     }, []);
 
     return (
-        <>
+        <div
+            className='mb-10'
+            id='inicio'
+        >
             <div id='home' className="mt-10 ml-4 flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center">
                 <div className={`mt-8 mb-4 rounded-[50%] lg:mr-48 lg:mt-24 overflow-hidden transition-opacity duration-1000 ${showPhoto ? 'opacity-100' : 'opacity-0'} lg:${showPhoto ? 'lg:opacity-100' : 'lg:opacity-0'}`}>
                     <img src={minhafoto} className='w-44 lg:w-80 bg-blue-800' alt="Minha foto" />
@@ -54,19 +57,25 @@ function SobreMim() {
                     </div>
                 </div>
             </div>
-            <div className={`transition-opacity duration-700 lg:duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`transition-opacity duration-700 lg:duration-1000 ${showText ? 'opacity-100' : 'opacity-0'} mt-10`}>
                 <MinhasInfos />
             </div>
-            <div>
+            <div
+                className='mt-10'
+            >
                 <Habilidades />
             </div>
-            <div>
+            <div
+                className='mt-10'
+            >
                 <Projetos />
             </div>
-            <div>
+            <div
+                className='mb-20 mt-10'
+            >
                 <Contatos />
             </div>
-        </>
+        </div>
     );
 }
 

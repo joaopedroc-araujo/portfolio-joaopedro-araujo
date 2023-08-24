@@ -1,7 +1,7 @@
 function MinhasInfos() {
     return (
         <div id="sobre-mim" className="mt-10 flex flex-col items-center w-full p-4 pl-1 lg:text-lg lg:w-[60%] lg:mt-14 lg:mx-auto">
-            <h1 className="text-xl font-bold mb-2 lg:mb-7">Sobre mim</h1>
+            <h1 className="text-xl font-bold mb-2 lg:mb-7 lg:text-3xl">Sobre mim</h1>
             <p className="text-justify lg:text-center m-4">
                 Estudante de Desenvolvimento Web pela {''}
                 <a href="https://www.betrybe.com/" target='_blank' rel="noreferrer" className="no-underline text-green-600 font-bold">

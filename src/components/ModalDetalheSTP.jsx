@@ -16,7 +16,7 @@ function ModalDetalheSTP({ show, onClose }) {
                     <Modal
                         show={show}
                         onHide={onClose}
-                        className='z-50 overflow-auto text-center p-4 h-[100vh] lg:h-auto lg:border-2 lg:border-blue-800 lg:rounded-md bg-gray-900 text-white lg:overflow-hidden lg:w-[50%] w-full lg:fixed lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 '
+                        className='z-50 overflow-auto text-center p-4 h-[100vh] lg:h-auto lg:border-2 lg:border-blue-800 lg:rounded-md bg-gray-900 text-white lg:overflow-hidden lg:w-[60%] w-full lg:fixed lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 '
                         centered
                     >
                         <Modal.Header closeButton>
