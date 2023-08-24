@@ -17,9 +17,18 @@ function BurgerMenu() {
                     onStateChange={handleStateChange}
                     right
                 >
-                    <a id="home" className="menu-item" href="/">Início</a>
-                    <a id="/sobre-mim" className="menu-item" href="#/sobre-mim">Sobre mim</a>
-                    <a id="contact" className="menu-item" href="/contatos">Contatos</a>
+                    <a id="sobre-mim" className="menu-item" href="#sobre-mim">Sobre mim</a>
+                    <a href='#habilidades' className='menu-item'>Habilidades</a>
+                    <a href='#projetos' className='menu-item'>Projetos</a>
+                    <a id="contact" className="menu-item" href="#contatos">Contatos</a>
+                    <a
+                        href='https://github.com/joaopedroc-araujo/portfolio-joaopedro-araujo'
+                        className='menu-item'
+                        target='_blank'
+                        rel="noreferrer"
+                    >
+                        Veja o código
+                    </a>
                 </Menu>
             </div>
         </div>

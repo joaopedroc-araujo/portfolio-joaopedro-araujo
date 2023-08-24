@@ -6,7 +6,7 @@ function Layout({ children }) {
 
     return (
         <div
-            className={`min-h-screen ${theme === 'light' ? 'bg-light-bg text-light-text' : 'bg-dark-bg text-dark-text'
+            className={`min-h-[100vh] ${theme === 'light' ? 'bg-light-bg text-light-text' : 'bg-dark-bg text-dark-text'
                 }`}
         >
             {children}

@@ -6,6 +6,7 @@ import { useTheme } from '../context/ThemeContext';
 import MinhasInfos from '../components/MinhasInfos';
 import Habilidades from '../components/Habilidades';
 import Projetos from '../components/Projetos';
+import Contatos from '../components/Contatos';
 
 function SobreMim() {
     const [showPhoto, setShowPhoto] = useState(false);
@@ -26,7 +27,7 @@ function SobreMim() {
 
     return (
         <>
-            <div className="mt-10 ml-4 flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center">
+            <div id='home' className="mt-10 ml-4 flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center">
                 <div className={`mt-8 mb-4 rounded-[50%] lg:mr-48 lg:mt-24 overflow-hidden transition-opacity duration-1000 ${showPhoto ? 'opacity-100' : 'opacity-0'} lg:${showPhoto ? 'lg:opacity-100' : 'lg:opacity-0'}`}>
                     <img src={minhafoto} className='w-44 lg:w-80 bg-blue-800' alt="Minha foto" />
                 </div>
@@ -61,6 +62,9 @@ function SobreMim() {
             </div>
             <div>
                 <Projetos />
+            </div>
+            <div>
+                <Contatos />
             </div>
         </>
     );

@@ -13,7 +13,7 @@ function ProjetoStarWars() {
     return (
         <>
             <div
-                className="relative border-b-4 border-blue-800 lg:w-[30%] grid grid-cols-1 w-[90%] justify-center align-middle gow rounded-md h-64 mb-10 cursor-pointer transform hover:scale-110 transition duration-300"
+                className="relative border-b-4 border-blue-800 lg:w-[30%] w-[90%] justify-center align-middle gow rounded-md h-64 mb-10 cursor-pointer transform hover:scale-110 transition duration-300"
                 onClick={() => setShowDetails(true)}
             >
                 <div
