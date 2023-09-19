@@ -51,9 +51,11 @@ function SobreMim() {
                                 Baixar CV
                             </button>
                         </a>
-                        <button className={`border border-blue-800 text-base py-2 px-4 rounded-md lg:text-lg lg:mt-7 ${theme === 'light' ? 'hover:bg-white hover:text-blue-800' : 'hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
-                            Entre em contato
-                        </button>
+                        <a href="#contatos">
+                            <button className={`border border-blue-800 text-base py-2 px-4 rounded-md lg:text-lg lg:mt-7 ${theme === 'light' ? 'hover:bg-white hover:text-blue-800' : 'hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
+                                Entre em contato
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
