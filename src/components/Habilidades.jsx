@@ -28,13 +28,13 @@ function Habilidades() {
                 >
                     {minhasHabilidades.map((habilidade) => (
                         <div
-                            className='flex flex-col items-center justify-center border-2 shadows border-blue-800 rounded-xl h-36 lg:h-52 lg:w-44 bg-gray-900 lg:mb-4 grow'
+                            className='flex flex-col items-center justify-center border-2 shadows border-blue-800 rounded-xl h-36 lg:h-52 lg:w-44 bg-gray-900 lg:mb-4 hover:scale-110'
                             key={habilidade.name}
-                            style={{
-                                transform: isVisible ? 'translateX(0)' : 'translateX(-100%)',
-                                opacity: isVisible ? 1 : 0,
-                                transition: 'transform 1s, opacity 1s',
-                            }}
+                        // style={{
+                        //     transform: isVisible ? 'translateX(0)' : 'translateX(-100%)',
+                        //     opacity: isVisible ? 1 : 0,
+                        //     transition: 'transform 1s, opacity 1s',
+                        // }}
                         >
                             <h3 className='text-lg font-bold text-blue-800 lg:text-2xl'>
                                 {habilidade.name}

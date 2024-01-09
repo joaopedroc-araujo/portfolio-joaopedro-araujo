@@ -1,6 +1,7 @@
 import ProjetoStarWars from "./ProjetoStarWars";
 import { useRef } from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import ProjetoPixelsArt from './ProjetoPixelsArt';
 
 function Projetos() {
     const ref = useRef();
@@ -41,6 +42,7 @@ function Projetos() {
                 }}
             >
                 <ProjetoStarWars />
+                <ProjetoPixelsArt />
             </div>
         </div>
     );

@@ -7,6 +7,7 @@ import MinhasInfos from '../components/MinhasInfos';
 import Habilidades from '../components/Habilidades';
 import Projetos from '../components/Projetos';
 import Contatos from '../components/Contatos';
+import { Link } from 'react-scroll';
 
 function SobreMim() {
     const [showPhoto, setShowPhoto] = useState(false);
@@ -42,20 +43,22 @@ function SobreMim() {
                         <TypeWriter text="João Pedro" delay={2000} />
                     </span>
                     <div className={`lg:mt-5 text-[10px] mt-1 lg:text-sm transition-opacity duration-700 lg:duration-1000 ${showText ? 'opacity-100' : 'opacity-0'} text-center w-full`}>
-                        Estudante de desenvolvimento web
-                        <br />
-                        Desenvolvedor Frontend
+                        Desenvolvedor Web Full Stack
                         <br />
                         <a href={curriculo} download>
                             <button className={`mt-7 border border-blue-800 rounded-md text-base mr-4 py-2 px-4 lg:text-lg bg-blue-800 ${theme === 'light' ? 'text-white hover:bg-white hover:text-blue-800' : 'text-black hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
                                 Baixar CV
                             </button>
                         </a>
-                        <a href="#contatos">
+                        <Link
+                            to='contatos'
+                            smooth={true}
+                            duration={1000}
+                        >
                             <button className={`border border-blue-800 text-base py-2 px-4 rounded-md lg:text-lg lg:mt-7 ${theme === 'light' ? 'hover:bg-white hover:text-blue-800' : 'hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
                                 Entre em contato
                             </button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

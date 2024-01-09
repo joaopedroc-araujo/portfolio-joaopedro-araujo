@@ -5,7 +5,7 @@ import { BsFillKanbanFill } from "react-icons/bs";
 import image from '../assets/Starwars.png';
 import './ProjetoStarWars.css';
 import { useState } from "react";
-import ModalDetalheSTP from "./ModalDetalheSTP";
+import ModalDetalheSTP from "../utils/ModalDetalheSTP";
 
 function ProjetoStarWars() {
     const [showDetails, setShowDetails] = useState(false);
@@ -13,17 +13,17 @@ function ProjetoStarWars() {
     return (
         <>
             <div
-                className="relative border-b-4 border-blue-800 lg:w-[30%] w-[100%] justify-center align-middle rounded-md h-64 mb-10 cursor-pointer transform hover:scale-110 transition duration-300"
+                className="relative border-b-4 border-blue-800 lg:w-[40%] w-[100%] justify-center align-middle rounded-md h-64 mb-10 cursor-pointer transform hover:scale-110 transition duration-300"
                 onClick={() => setShowDetails(true)}
             >
                 <div
                     style={{ backgroundImage: `url(${image})` }}
-                    className="absolute inset-0 bg-center w-full bg-no-repeat bg-cover rounded-md" />
-                <div className="z-10 flex flex-col justify-center items-center text-center">
-                    <span className="text-xl text-center align-middle justify-center font-bold text-blue-800 lg:text-2xl">
+                    className="absolute z-0 inset-0 bg-center w-full bg-no-repeat bg-cover rounded-md" />
+                <div className="relative z-20 flex flex-col justify-center items-center text-center h-full">
+                    <span className="text-2xl text-center align-middle justify-center font-bold text-blue-700 lg:text-xl">
                         Projeto Star Wars Planet Search
                     </span>
-                    <span className='text-xl text-blue-800 flex flex-row justify-center align-middle mt-2 text-center lg:text-2xl'>
+                    <span className='text-2xl text-blue-700 flex flex-row justify-center align-middle mt-2 text-center lg:text-4xl'>
                         <BiLogoReact className='mr-2' />
                         <SiTailwindcss className='mr-2' />
                         <FaGithub className='mr-2' />

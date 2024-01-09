@@ -2,7 +2,7 @@ import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3, DiScrum } from "react-icons/di";
 import { BiLogoJavascript, BiLogoReact, BiLogoDocker } from "react-icons/bi";
 import { TbBrandRedux } from "react-icons/tb";
-import { SiJest, SiTailwindcss, SiVite, SiMysql, SiNodedotjs, SiExpress, SiMongodb } from "react-icons/si";
+import { SiJest, SiTailwindcss, SiVite, SiMysql, SiNodedotjs, SiExpress, SiMongodb, SiPython } from "react-icons/si";
 import { FaGitAlt, FaGithub, FaBootstrap } from "react-icons/fa";
 import { BsFillKanbanFill } from "react-icons/bs";
 
@@ -18,6 +18,10 @@ const minhasHabilidades = [
     {
         name: 'Javascript',
         icon: <BiLogoJavascript />,
+    },
+    {
+        name: 'Python',
+        icon: <SiPython />
     },
     {
         name: 'React',
