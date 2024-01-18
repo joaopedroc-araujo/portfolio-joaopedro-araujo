@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Header from './components/Header';
 import SobreMim from './pages/SobreMim';
 
+
 function App() {
   useEffect(() => {
     const handleBeforeUnload = () => {

@@ -44,6 +44,7 @@ function Projetos() {
             >
                 <ProjetoStarWars />
                 <ProjetoPixelsArt />
+
             </div>
         </div>
     );
