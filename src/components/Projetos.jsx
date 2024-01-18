@@ -23,8 +23,9 @@ function Projetos() {
             >
                 Projetos
             </h1>
+
             <span
-                className="text-sm text-center mb-6"
+                className="text-sm text-center mb-10"
                 style={{
                     transform: isVisible ? 'translateX(0)' : 'translateX(-100%)',
                     opacity: isVisible ? 1 : 0,
@@ -34,7 +35,7 @@ function Projetos() {
                 🚧 Essa seção está em construção... 🚧
             </span>
             <div
-                className="lg:w-[80%] lg:ml-5 mt-3 lg:mt-10 lg:grid-cols-5 lg:justify-start justify-center"
+                className="flex flex-wrap justify-start gap-4 lg:justify-center items-stretch w-[80%] lg:w-[90%]"
                 style={{
                     transform: isVisible ? 'translateX(0)' : 'translateX(-100%)',
                     opacity: isVisible ? 1 : 0,

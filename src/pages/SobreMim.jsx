@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import TypeWriter from "../utils/TypeWritter";
 import minhafoto from '../assets/minha-foto.png'
-import curriculo from '../assets/Currículo João Pedro.pdf'
+import curriculo from '../assets/CurriculoJoaoPedro.pdf'
 import { useTheme } from '../context/ThemeContext';
 import MinhasInfos from '../components/MinhasInfos';
 import Habilidades from '../components/Habilidades';
