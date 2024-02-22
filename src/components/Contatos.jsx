@@ -1,35 +1,28 @@
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { BiLogoGmail } from "react-icons/bi";
 import { useRef } from 'react';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import { motion } from 'framer-motion'
 
 function Contatos() {
     const ref = useRef();
-    const isVisible = useIntersectionObserver(ref, { thresholdUp: 0.5, thresholdDown: 0.4 });
 
     return (
         <>
-            <div
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 2 }}
                 ref={ref}
                 id="contatos"
             >
                 <h1
                     className="text-center text-xl font-bold mb-5 lg:text-3xl"
-                    style={{
-                        transform: isVisible ? 'translateX(0)' : 'translateX(-100%)',
-                        opacity: isVisible ? 1 : 0,
-                        transition: 'transform 1s, opacity 1s',
-                    }}
                 >
                     Contatos
                 </h1>
                 <div
                     className="flex justify-center"
-                    style={{
-                        transform: isVisible ? 'translateX(0)' : 'translateX(-100%)',
-                        opacity: isVisible ? 1 : 0,
-                        transition: 'transform 1s, opacity 1s',
-                    }}
                 >
                     <a
                         href='https://github.com/joaopedroc-araujo'
@@ -64,7 +57,7 @@ function Contatos() {
                         <FaWhatsapp />
                     </a>
                 </div>
-            </div>
+            </motion.div>
             <div className='h-11'></div>
         </>
     )

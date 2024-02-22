@@ -69,6 +69,7 @@ function SobreMim() {
                 className='mt-10'
             >
                 <Habilidades />
+
             </div>
             <div
                 className='mt-10'
