@@ -1,7 +1,6 @@
-import ProjetoStarWars from "./ProjetoStarWars";
 import { useRef } from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import ProjetoPixelsArt from './ProjetoPixelsArt';
+import {Projetos as ProjetosFeitos} from '../components/Projects/index'
 
 function Projetos() {
     const ref = useRef();
@@ -42,9 +41,9 @@ function Projetos() {
                     transition: 'transform 1s, opacity 1s',
                 }}
             >
-                <ProjetoStarWars />
-                <ProjetoPixelsArt />
-
+                {/* <ProjetoStarWars />
+                <ProjetoPixelsArt /> */}
+                <ProjetosFeitos />
             </div>
         </div>
     );
