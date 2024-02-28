@@ -1,12 +1,32 @@
 import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3, DiScrum } from "react-icons/di";
 import { BiLogoJavascript, BiLogoReact, BiLogoDocker } from "react-icons/bi";
-import { TbBrandRedux } from "react-icons/tb";
-import { SiJest, SiTailwindcss, SiVite, SiMysql, SiNodedotjs, SiExpress, SiMongodb, SiPython } from "react-icons/si";
+import { TbBrandReactNative, TbBrandRedux } from "react-icons/tb";
+import { SiJest, SiTailwindcss, SiVite, SiMysql, SiNodedotjs, SiExpress, SiMongodb, SiPython, SiTypescript } from "react-icons/si";
 import { FaGitAlt, FaGithub, FaBootstrap } from "react-icons/fa";
 import { BsFillKanbanFill } from "react-icons/bs";
 
 const minhasHabilidades = [
+    {
+        name: 'React',
+        icon: <BiLogoReact />,
+    },
+    {
+        name: 'NodeJs',
+        icon: <SiNodedotjs />
+    },
+    {
+        name: 'React Native',
+        icon: <TbBrandReactNative />
+    },
+    {
+        name: 'Javascript',
+        icon: <BiLogoJavascript />,
+    },
+    {
+        name: 'TypeScript',
+        icon: <SiTypescript />,
+    },
     {
         name: 'HTML',
         icon: <AiFillHtml5 />,
@@ -15,17 +35,10 @@ const minhasHabilidades = [
         name: 'CSS',
         icon: <DiCss3 />,
     },
-    {
-        name: 'Javascript',
-        icon: <BiLogoJavascript />,
-    },
+    
     {
         name: 'Python',
         icon: <SiPython />
-    },
-    {
-        name: 'React',
-        icon: <BiLogoReact />,
     },
     {
         name: 'Redux',
@@ -35,10 +48,7 @@ const minhasHabilidades = [
         name: 'Docker',
         icon: <BiLogoDocker />,
     },
-    {
-        name: 'NodeJs',
-        icon: <SiNodedotjs />
-    },
+    
     {
         name: 'Express',
         icon: <SiExpress />
