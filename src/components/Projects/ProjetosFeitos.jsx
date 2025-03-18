@@ -30,7 +30,6 @@ export const ProjetosFeitos = ({ imagem, titulo, icones }) => {
                 className="relative border-b-4 border-blue-800 w-[400px] justify-center align-middle rounded-md h-64 mb-10 cursor-pointer transform hover:scale-110 transition duration-300"
                 onClick={() => {
                     handleShowDetails(titulo)
-                    // setShowDetails(true)
                 }}
             >
                 <div
