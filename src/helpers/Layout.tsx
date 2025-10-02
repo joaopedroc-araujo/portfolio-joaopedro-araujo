@@ -1,11 +1,7 @@
-import { ReactNode } from 'react';
+/* eslint-disable react/prop-types */
 import { useTheme } from '../context/ThemeContext';
 
-interface LayoutProps {
-    children: ReactNode;
-}
-
-function Layout({ children }: LayoutProps) {
+function Layout({ children }) {
     const { theme } = useTheme();
 
     return (

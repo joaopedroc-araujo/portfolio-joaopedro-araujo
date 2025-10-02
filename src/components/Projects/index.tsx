@@ -1,11 +1,5 @@
 /* eslint-disable react/jsx-key */
 import { ProjetosFeitos } from './ProjetosFeitos';
-import starwarslogo from '../../assets/Starwars.png';
-import pixelsartlogo from '../../assets/pixelsArt.png';
-import pokedexstatelogo from '../../assets/pokedexstate.png';
-import solarSystemlogo from '../../assets/solarsystem.png';
-import shoppingcartlogo from '../../assets/shoppingcart.png';
-import tfclogo from '../../assets/tfc.png';
 import { pixelsArtIcons, pokedexStateIcons, shoppingCartIcons, solarSystemIcons, starWarsIcons, tfcIcons } from '../../utils/projectIcons';
 
 export const Projetos = () => {
@@ -13,32 +7,32 @@ export const Projetos = () => {
         <>
             <ProjetosFeitos
                 titulo='Projeto Star Wars Planet Search'
-                imagem={starwarslogo}
+                imagem="/Starwars.png"
                 icones={[...starWarsIcons]}
             />
             <ProjetosFeitos
                 titulo='Projeto Pixels Art'
-                imagem={pixelsartlogo}
+                imagem="/pixelsArt.png"
                 icones={[...pixelsArtIcons]}
             />
             <ProjetosFeitos
                 titulo='Projeto Pokedex State'
-                imagem={pokedexstatelogo}
+                imagem="/pokedexstate.png"
                 icones={[...pokedexStateIcons]}
             />
             <ProjetosFeitos
                 titulo='Projeto Solar System'
-                imagem={solarSystemlogo}
+                imagem="/solarsystem.png"
                 icones={[...solarSystemIcons]}
             />
             <ProjetosFeitos
                 titulo='Projeto Shopping Cart'
-                imagem={shoppingcartlogo}
+                imagem="/shoppingcart.png"
                 icones={[...shoppingCartIcons]}
             />
             <ProjetosFeitos
                 titulo='Projeto TFC'
-                imagem={tfclogo}
+                imagem="/tfc.png"
                 icones={[...tfcIcons]}
             />
         </>

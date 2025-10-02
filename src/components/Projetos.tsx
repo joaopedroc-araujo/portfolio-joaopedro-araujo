@@ -3,7 +3,7 @@ import { Projetos as ProjetosFeitos } from '../components/Projects/index'
 import { motion } from 'framer-motion';
 
 function Projetos() {
-    const ref = useRef<HTMLDivElement>(null);
+    const ref = useRef();
 
     return (
         <motion.div

@@ -1,5 +1,5 @@
 import { BiLogoJavascript, BiLogoReact, BiLogoTypescript } from "react-icons/bi";
-import { SiChai, SiDocker, SiExpress, SiJest, SiJsonwebtokens, SiMocha, SiMysql, SiSequelize, SiTailwindcss, SiVite } from "react-icons/si";
+import { SiChai, SiDocker, SiExpress, SiJest, SiJsonwebtokens, SiMocha, SiMysql, SiNodemon, SiSequelize, SiTailwindcss, SiVite } from "react-icons/si";
 import { FaGitAlt, FaGithub, FaBootstrap } from "react-icons/fa";
 import { BsFillKanbanFill } from "react-icons/bs";
 import { AiFillHtml5 } from 'react-icons/ai';

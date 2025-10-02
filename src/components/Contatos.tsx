@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { motion } from 'framer-motion'
 
 function Contatos() {
-    const ref = useRef<HTMLDivElement>(null);
+    const ref = useRef();
 
     return (
         <>

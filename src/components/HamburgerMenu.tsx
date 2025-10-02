@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import { Link } from 'react-scroll';
 import './HamburgerMenu.css';
 
 interface BurgerState {
@@ -14,6 +13,8 @@ function BurgerMenu() {
         setIsOpen(state.isOpen);
     };
 
+    const closeMenu = () => setIsOpen(false);
+
     return (
         <div className='lg:hidden'>
             <div className='relative z-10'>
@@ -22,46 +23,21 @@ function BurgerMenu() {
                     onStateChange={handleStateChange}
                     right
                 >
-                    <Link
-                        to="inicio"
-                        className="menu-item"
-                        smooth={true}
-                        duration={500}
-                    >
+                    <a href="#inicio" className="menu-item" onClick={closeMenu}>
                         Início
-                    </Link>
-                    <Link
-                        to="sobre-mim"
-                        className="menu-item"
-                        smooth={true}
-                        duration={500}
-                    >
+                    </a>
+                    <a href="#sobre-mim" className="menu-item" onClick={closeMenu}>
                         Sobre mim
-                    </Link>
-                    <Link
-                        to="habilidades"
-                        className="menu-item"
-                        smooth={true}
-                        duration={500}
-                    >
+                    </a>
+                    <a href="#habilidades" className="menu-item" onClick={closeMenu}>
                         Habilidades
-                    </Link>
-                    <Link
-                        to="projetos"
-                        className="menu-item"
-                        smooth={true}
-                        duration={500}
-                    >
+                    </a>
+                    <a href="#projetos" className="menu-item" onClick={closeMenu}>
                         Projetos
-                    </Link>
-                    <Link
-                        to="contatos"
-                        className="menu-item"
-                        smooth={true}
-                        duration={500}
-                    >
+                    </a>
+                    <a href="#contatos" className="menu-item" onClick={closeMenu}>
                         Contatos
-                    </Link>
+                    </a>
                     <a
                         href='https://github.com/joaopedroc-araujo/portfolio-joaopedro-araujo'
                         className='menu-item'

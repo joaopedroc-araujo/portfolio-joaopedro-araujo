@@ -1,6 +1,5 @@
 import { useTheme } from '../context/ThemeContext';
-import sunMode from '../assets/lighterSun.svg';
-import moonMode from '../assets/darkMoon.svg';
+import Image from 'next/image';
 
 function ToggleButton() {
     const { theme, toggleTheme } = useTheme();
@@ -11,9 +10,9 @@ function ToggleButton() {
             className='flex flex-row-reverse justify-center items-center ml-auto mr-20'
         >
             {theme === 'light' ? (
-                <img src={moonMode} alt='Light Mode' className='w-6 h-6 lg:h-10 ' />
+                <Image src="/darkMoon.svg" alt='Light Mode' width={40} height={40} className='w-6 h-6 lg:h-10 ' />
             ) : (
-                <img src={sunMode} alt='Dark Mode' className='w-6 h-6 lg:h-10 ' />
+                <Image src="/lighterSun.svg" alt='Dark Mode' width={40} height={40} className='w-6 h-6 lg:h-10 ' />
             )}
         </button>
     );

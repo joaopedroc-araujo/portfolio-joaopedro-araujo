@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import TypeWriter from "../utils/TypeWritter";
-import minhafoto from '../assets/minha-foto.png'
-import curriculo from '../assets/CurriculoJoaoPedro.pdf'
 import { useTheme } from '../context/ThemeContext';
-import MinhasInfos from '../components/MinhasInfos';
-import Habilidades from '../components/Habilidades';
-import Projetos from '../components/Projetos';
-import Contatos from '../components/Contatos';
-import { Link } from 'react-scroll';
+import MinhasInfos from './MinhasInfos';
+import Habilidades from './Habilidades';
+import Projetos from './Projetos';
+import Contatos from './Contatos';
 
 function SobreMim() {
     const [showPhoto, setShowPhoto] = useState(false);
@@ -31,9 +29,9 @@ function SobreMim() {
             className='mb-10'
             id='inicio'
         >
-            <div id='home' className="mt-10 ml-4 flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center">
+            <div id='sobre-mim' className="mt-10 ml-4 flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center">
                 <div className={`mt-8 mb-4 rounded-[50%] lg:mr-48 lg:mt-24 overflow-hidden transition-opacity duration-1000 ${showPhoto ? 'opacity-100' : 'opacity-0'} lg:${showPhoto ? 'lg:opacity-100' : 'lg:opacity-0'}`}>
-                    <img src={minhafoto} className='w-44 lg:w-80 bg-blue-800' alt="Minha foto" />
+                    <Image src="/minha-foto.png" width={320} height={320} className='w-44 lg:w-80 bg-blue-800' alt="Minha foto" />
                 </div>
                 <div className="lg:ml-32 flex flex-col items-center">
                     <span className="text-lg lg:text-5xl">
@@ -45,20 +43,16 @@ function SobreMim() {
                     <div className={`lg:mt-5 text-[10px] mt-1 lg:text-sm transition-opacity duration-700 lg:duration-1000 ${showText ? 'opacity-100' : 'opacity-0'} text-center w-full`}>
                         Desenvolvedor Web Full Stack
                         <br />
-                        <a href={curriculo} download>
+                        <a href="/CurriculoJoaoPedro.pdf" download>
                             <button className={`mt-7 border border-blue-800 rounded-md text-base mr-4 py-2 px-4 lg:text-lg bg-blue-800 ${theme === 'light' ? 'text-white hover:bg-white hover:text-blue-800' : 'text-black hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
                                 Baixar CV
                             </button>
                         </a>
-                        <Link
-                            to='contatos'
-                            smooth={true}
-                            duration={1000}
-                        >
+                        <a href='#contatos'>
                             <button className={`border border-blue-800 text-base py-2 px-4 rounded-md lg:text-lg lg:mt-7 ${theme === 'light' ? 'hover:bg-white hover:text-blue-800' : 'hover:bg-black hover:text-white'} transform hover:scale-95 transition-transform`}>
                                 Entre em contato
                             </button>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -67,17 +61,20 @@ function SobreMim() {
             </div>
             <div
                 className='mt-10'
+                id="habilidades"
             >
                 <Habilidades />
 
             </div>
             <div
                 className='mt-10'
+                id="projetos"
             >
                 <Projetos />
             </div>
             <div
                 className='mb-20 mt-10'
+                id="contatos"
             >
                 <Contatos />
             </div>
