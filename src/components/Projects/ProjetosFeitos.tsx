@@ -1,11 +1,28 @@
-/* eslint-disable react/prop-types */
-import {  useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ModalDetalheGenerico from '../Modals/ModalDetalheGenerico';
 import { arrayModais } from '../../utils/arrayModais';
+import { IconType } from 'react-icons';
 
-export const ProjetosFeitos = ({ imagem, titulo, icones }) => {
+interface Link {
+    url: string;
+    text: string;
+}
+
+interface ModalInfo {
+    title: string;
+    bodyContent: string;
+    links: Link[];
+}
+
+interface ProjetosFeitosProps {
+    imagem: string;
+    titulo: string;
+    icones: IconType[];
+}
+
+export const ProjetosFeitos = ({ imagem, titulo, icones }: ProjetosFeitosProps) => {
     const [showDetails, setShowDetails] = useState(false);
-    const [currentModal, setCurrentModal] = useState('');
+    const [currentModal, setCurrentModal] = useState<ModalInfo | null>(null);
 
     useEffect(() => {
         if (currentModal) {
@@ -15,12 +32,12 @@ export const ProjetosFeitos = ({ imagem, titulo, icones }) => {
         }
     }, [currentModal]);
 
-    const handleShowDetails = async (titulo) => {
+    const handleShowDetails = (titulo: string) => {
         const modal = arrayModais.find(modal => modal.title === titulo);
-        if (currentModal !== modal) {
-            setCurrentModal(modal);
+        if (currentModal?.title !== titulo) {
+            setCurrentModal(modal || null);
         } else {
-            setCurrentModal('');
+            setCurrentModal(null);
         }
     };
 
@@ -40,12 +57,12 @@ export const ProjetosFeitos = ({ imagem, titulo, icones }) => {
                         {titulo}
                     </span>
                     <span className='text-2xl text-white rounded p-1 bg-blue-700 flex flex-row justify-center align-middle mt-2 text-center lg:text-4xl'>
-                        {icones.map((Icon, index) => <Icon key={index} className='mr-2 lg:mx-1 font-black lg:w-7' />)}
+                        {icones.map((Icon: IconType, index: number) => <Icon key={index} className='mr-2 lg:mx-1 font-black lg:w-7' />)}
                     </span>
                 </div>
             </div>
             <div>
-                {showDetails && currentModal && <ModalDetalheGenerico onClose={() => setShowDetails(false)} {...currentModal} show={showDetails} />}
+                {showDetails && currentModal && <ModalDetalheGenerico onClose={() => setCurrentModal(null)} {...currentModal} show={showDetails} />}
             </div>
         </>
     );

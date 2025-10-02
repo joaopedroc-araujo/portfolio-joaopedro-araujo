@@ -2,7 +2,20 @@ import { animated, useTransition } from 'react-spring';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-function ModalDetalheGenerico({ show, onClose, title, bodyContent, links }) {
+interface Link {
+    url: string;
+    text: string;
+}
+
+interface ModalDetalheGenericoProps {
+    show: boolean;
+    onClose: () => void;
+    title: string;
+    bodyContent: string;
+    links: Link[];
+}
+
+function ModalDetalheGenerico({ show, onClose, title, bodyContent, links }: ModalDetalheGenericoProps) {
     const transitions = useTransition(show, {
         from: { opacity: 0 },
         enter: { opacity: 1 },
@@ -30,7 +43,7 @@ function ModalDetalheGenerico({ show, onClose, title, bodyContent, links }) {
                             </span>
                         </Modal.Body>
                         <div className='flex justify-center'>
-                            {links.map((link, index) => (
+                            {links.map((link: Link, index: number) => (
                                 <button key={index} className='border border-blue-800 bg-blue-800 rounded-md p-3 mr-2 text-white'>
                                     <a
                                         href={link.url}

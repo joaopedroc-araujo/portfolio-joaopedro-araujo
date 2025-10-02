@@ -3,10 +3,14 @@ import { slide as Menu } from 'react-burger-menu';
 import { Link } from 'react-scroll';
 import './HamburgerMenu.css';
 
+interface BurgerState {
+    isOpen: boolean;
+}
+
 function BurgerMenu() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const handleStateChange = (state) => {
+    const handleStateChange = (state: BurgerState) => {
         setIsOpen(state.isOpen);
     };
 
