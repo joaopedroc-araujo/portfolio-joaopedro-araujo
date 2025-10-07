@@ -1,14 +1,18 @@
 import minhasHabilidades from '../utils/minhasHabilidades';
 import './Habilidades.css'
-import { useRef } from 'react';
+import { useRef, ReactElement } from 'react';
 import { motion } from 'framer-motion'
 
+interface Habilidade {
+    name: string;
+    icon: ReactElement;
+}
+
 function Habilidades() {
-    const ref = useRef();
+    const ref = useRef<HTMLDivElement>(null);
 
     return (
         <div
-
             ref={ref}
             id="habilidades"
         >
@@ -27,7 +31,7 @@ function Habilidades() {
                 <div
                     className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:w-full gap-5 w-auto max-w-5xl'
                 >
-                    {minhasHabilidades.map((habilidade) => (
+                    {minhasHabilidades.map((habilidade: Habilidade) => (
                         <div
                             className='flex flex-col items-center justify-center border-2 shadows border-blue-800 rounded-xl h-36 lg:h-52 lg:w-44 bg-gray-900 lg:mb-4 hover:scale-110'
                             key={habilidade.name}

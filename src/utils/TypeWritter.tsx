@@ -1,12 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 
-export default function TypeWriter(props) {
+interface TypeWriterProps {
+    text: string;
+    hideCursor?: boolean;
+    delay?: number;
+}
+
+export default function TypeWriter(props: TypeWriterProps) {
     const [text, setText] = useState('');
     const [displayCursor, setDisplayCursor] = useState(false);
 
-    const escreverNaTela = (text, i = 0) => {
+    const escreverNaTela = (text: string, i = 0) => {
         if (i < text.length) {
             setDisplayCursor(true);
 

@@ -1,8 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, RefObject } from 'react';
 
-function useIntersectionObserver(ref, options) {
+interface CustomIntersectionObserverOptions extends IntersectionObserverInit {
+    thresholdUp?: boolean;
+    thresholdDown?: boolean;
+}
+
+function useIntersectionObserver(
+    ref: RefObject<Element>,
+    options: CustomIntersectionObserverOptions
+): boolean {
     const [isVisible, setIsVisible] = useState(false);
-    const [prevY, setPrevY] = useState(null);
+    const [prevY, setPrevY] = useState<number | null>(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
@@ -27,13 +35,14 @@ function useIntersectionObserver(ref, options) {
             setPrevY(currentY);
         }, options);
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        const currentRef = ref.current;
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, [ref, options, prevY]);
